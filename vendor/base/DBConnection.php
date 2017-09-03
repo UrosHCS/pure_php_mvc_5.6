@@ -60,7 +60,7 @@ class DBConnection {
 
 		$columns = implode(', ', $columns);
 
-		$preparedQuery = "SELECT {$columns} FROM {$tableName}{$preparedCondition};";
+		$preparedQuery = "SELECT {$columns} FROM {$tableName} {$preparedCondition};";
 
 		return $this->query($preparedQuery, $preparedValues);
 	}
